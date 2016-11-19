@@ -1,6 +1,10 @@
 # lauzhack-2016
 Lauzhack hackathon
 
+# !! PANIC !!
+Project killed due to problems... feasibility problems... ¯\(°_o)/¯
+
+
 # System Configuration
 You shoud have installed virtualenv:
 ```
