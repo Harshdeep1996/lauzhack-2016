@@ -2,10 +2,12 @@
 Lauzhack hackathon
 
 # System Configuration
+You shoud have installed virtualenv:
 ```
 $ sudo pip install virtualenv
 ```
 
+Enter in the root folder of this project:
 ```
 $ cd lauzhack-2016
 ```
