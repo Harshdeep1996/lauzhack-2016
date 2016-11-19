@@ -29,3 +29,8 @@ In our venv we will first install Flask framework:
 ```
 (venv) lauzhack-2016 $ pip install Flask
 ``` 
+
+# Start the API Server
+```
+(venv) lauzhack-2016 $ python whatthecrop.py
+``` 
