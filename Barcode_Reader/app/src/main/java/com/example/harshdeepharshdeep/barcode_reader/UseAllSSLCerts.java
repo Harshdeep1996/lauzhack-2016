@@ -14,10 +14,10 @@ import javax.net.ssl.X509TrustManager;
  * Created by harshdeepharshdeep on 20/11/2016.
  */
 
-public class NukeSSLCerts {
+public class UseAllSSLCerts {
     protected static final String TAG = "NukeSSLCerts";
 
-    public static void nuke() {
+    public static void destroyAllCerts() {
         try {
             TrustManager[] trustAllCerts = new TrustManager[] {
                     new X509TrustManager() {

@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        NukeSSLCerts.nuke();
+        UseAllSSLCerts.destroyAllCerts();
         setContentView(R.layout.activity_main);
         scanBtn = (Button) findViewById(R.id.scan_button);
         formatTxt = (TextView) findViewById(R.id.scan_format);
