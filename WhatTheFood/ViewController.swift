@@ -4,7 +4,7 @@ import Gloss
 
 class ViewController: UIViewController {
     
-    var foodItems : [(Double, Double, Double)] = []
+    var foodItems : [(String?, Double, Double, Double, Double)] = []
     
     var controller : CameraViewController!
     
@@ -76,10 +76,14 @@ extension ViewController: BarcodeScannerCodeDelegate {
                 var carbs: Double = 0.0
                 var sugars: Double = 0.0
                 var fats: Double = 0.0
+                var proteins: Double = 0.0
+                var name: String? = ""
                 
                 if let data = json?["data"] as? Array<Any> {
+                    if (data.count) > 0 {
                     if let data1 = data[0] as? [String:AnyObject] {
                         if let attributes = data1["attributes"] as? [String:AnyObject] {
+                            name = attributes["name"] as? String
                             if let nutrients = attributes["nutrients"] as? Array<[String:AnyObject]> {
                                 
                                 
@@ -107,18 +111,24 @@ extension ViewController: BarcodeScannerCodeDelegate {
                                         } else if let fats2 = nutrient["per-hundred"] as? String {
                                             fats = Double(fats2)!
                                         }
+                                    } else if name == "Protein" {
+                                        if let proteins1 = nutrient["per-portion"] as? String {
+                                            proteins = Double(proteins1)!
+                                        } else if let proteins2 = nutrient["per-hundred"] as? String {
+                                            proteins = Double(proteins2)!
+                                        }
                                     }
-                                    
+                                }
                                 }
                             }
                         }
                     }
                 }
                 
-                self.foodItems.append((carbs, sugars, fats))
+                self.foodItems.append((name, carbs, sugars, fats, proteins))
                 print(self.foodItems)
                 
-                self.controller.addDropz(newScan: (carbs, sugars, fats))
+                self.controller.addDropz(newScan: (carbs, sugars, fats, proteins))
 
             } catch {
                 print(error)

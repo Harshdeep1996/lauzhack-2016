@@ -142,6 +142,7 @@ class EmojiView: NamedBezierPathsView ,UIDynamicAnimatorDelegate {
             case 0: text.text = "💩"
             case 1: text.text = "🍬"
             case 2: text.text = "🍔"
+            case 3: text.text = "🍗"
         default: break
         }
         

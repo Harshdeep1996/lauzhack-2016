@@ -20,8 +20,23 @@ class FallingEmojiBehavior: UIDynamicBehavior {
     
     fileprivate let itemBehavior: UIDynamicItemBehavior = {
         let dib = UIDynamicItemBehavior()
+//        var defaults = UserDefaults.standard
+//        
+//        if (defaults.object(forKey: "rotation") != nil) {
+//            dib.allowsRotation = defaults.bool(forKey: "rotation")
+//        } else {
+//            dib.allowsRotation = true
+//        }
+//        
+//        if (defaults.object(forKey: "elasticity") != nil) {
+//            dib.elasticity = CGFloat(defaults.float(forKey: "elasticity"))
+//        } else {
+//            dib.elasticity = 0.75
+//        }
+        
+        dib.elasticity = 0.75
         dib.allowsRotation = true
-        dib.elasticity = 0.75 // 1.0 means perfect elasticity
+        
         return dib
     }()
     

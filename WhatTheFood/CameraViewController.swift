@@ -43,7 +43,7 @@ class CameraViewController: BarcodeScannerController {
         // Do any additional setup after loading the view.
     }
     
-    func addDropz(newScan: (Double, Double, Double)) {
+    func addDropz(newScan: (Double, Double, Double, Double)) {
         DispatchQueue.main.async(){
             self.controller.addDropz(newScan: newScan)
         }
