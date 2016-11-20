@@ -2,6 +2,9 @@ package com.example.harshdeepharshdeep.barcode_reader;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.harshdeepharshdeep.barcode_reader.Service.FoodObject;
+import com.example.harshdeepharshdeep.barcode_reader.Service.Tools;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import android.content.Intent;
@@ -43,8 +46,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         {
             String scanContent = scanningResult.getContents();
             String scanFormat = scanningResult.getFormatName();
-            formatTxt.setText("FORMAT: " + scanFormat);
-            contentTxt.setText("CONTENT: " + scanContent);
+            FoodObject foodObj = Tools.getFoodObjectFromBarcode(scanContent);
+
+
+            formatTxt.setText("FORMAT: " + foodObj);
+            contentTxt.setText("CONTENT: " + foodObj);
         }
         else
         {
