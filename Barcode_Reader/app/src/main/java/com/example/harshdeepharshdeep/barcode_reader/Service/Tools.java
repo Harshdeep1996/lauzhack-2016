@@ -20,8 +20,31 @@ public class Tools {
     static String BARCODE_REQUEST = "products?barcodes[]=" ;
     static String PRODUCT_ID_REQUEST = "product/" ;
 
+    public static String createGetBarcodeUrl (String barcode)
+    {
+        return URL + BARCODE_REQUEST + barcode;
+    }
+
     public static FoodObject getFoodObjectFromBarcode(String barcode) {
         JSONObject response = sendBarcodeReq(barcode);
+        if(response.equals(null))
+        {
+            FoodObject ret = new FoodObject();
+            ret.setName("Error: json response is null");
+            return ret;
+        }
+        return parseFoodItem(response);
+    }
+
+    public static FoodObject getFoodObjectFromJsonString(String jsonString) {
+        if(jsonString.contains("\"data\":[]"))
+        {
+            FoodObject ret = new FoodObject();
+            ret.setName("Error: json response is null");
+            return ret;
+        }
+        JSONObject response = processJsonString(jsonString);
+
         return parseFoodItem(response);
     }
 
@@ -51,7 +74,16 @@ public class Tools {
     public static JSONObject sendBarcodeReq(String barcode) {
         try {
             String testBarcodeRespone = getHTMLAsJson(URL + BARCODE_REQUEST + barcode);
-            JSONObject response = new JSONObject(testBarcodeRespone);
+            return processJsonString(testBarcodeRespone);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public static JSONObject processJsonString (String json) {
+        try {
+            JSONObject response = new JSONObject(json);
             return  ((JSONObject)response.getJSONArray("data").get(0)).getJSONObject("attributes");
         } catch (Exception e) {
             // TODO Auto-generated catch block

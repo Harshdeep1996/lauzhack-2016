@@ -24,6 +24,8 @@ import android.widget.Toast;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import org.json.JSONObject;
+
 import java.util.logging.Logger;
 
 
@@ -54,24 +56,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (scanningResult != null)
         {
-<<<<<<< HEAD
             scanContent = scanningResult.getContents();
             scanFormat = scanningResult.getFormatName();
             formatTxt.setText("FORMAT: " + scanFormat);
             contentTxt.setText("CONTENT: " + scanContent);
-        } else {
-=======
-            String scanContent = scanningResult.getContents();
-            String scanFormat = scanningResult.getFormatName();
-            FoodObject foodObj = Tools.getFoodObjectFromBarcode(scanContent);
-
-
-            formatTxt.setText("FORMAT: " + foodObj);
-            contentTxt.setText("CONTENT: " + foodObj);
         }
         else
         {
->>>>>>> 8a211377ec28d069fe5d8c157fe47b59160505a8
             Toast toast = Toast.makeText(getApplicationContext(),
                     "No scan data received!", Toast.LENGTH_SHORT);
             toast.show();
@@ -80,7 +71,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         final TextView mTextView = (TextView) findViewById(R.id.scan_format);
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://www.openfood.ch/api/v1/products?barcodes[]=3046920022651";
+        //String url = "https://www.openfood.ch/api/v1/products?barcodes[]=3046920022651";
+        String url = Tools.createGetBarcodeUrl(scanContent);
         Log.v("main", url);
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -89,7 +81,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     public void onResponse(String response) {
                         Log.v("main", "RESPONSE RECEIVED");
                         // Display the first 500 characters of the response string.
-                        mTextView.setText("Response is: " + response.substring(0, 500));
+                        String jsonString = response;
+                        FoodObject fObj =  Tools.getFoodObjectFromJsonString(jsonString);
+                        mTextView.setText(fObj.getName() + "\n" + fObj.toString());
                     }
                 }, new Response.ErrorListener() {
             @Override

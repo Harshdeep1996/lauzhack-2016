@@ -5,6 +5,8 @@ package com.example.harshdeepharshdeep.barcode_reader.Service;
  */
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class FoodObject {
     private HashMap<String, Nutrient> nuts;
@@ -18,13 +20,20 @@ public class FoodObject {
         nuts.put(nu.getName(), nu);
     }
 
+    public String toString() {
+        Iterator it = nuts.entrySet().iterator();
+        String ret = "";
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            ret += (pair.getKey() + " = " + pair.getValue() + "\n");
+        }
+        return ret;
+    }
     public Nutrient getNut(String name)
     {
         return nuts.get(name);
     }
-    public String toString(){
-        return "name: " + name;
-    }
+
 
     public String getName() {
         return name;
