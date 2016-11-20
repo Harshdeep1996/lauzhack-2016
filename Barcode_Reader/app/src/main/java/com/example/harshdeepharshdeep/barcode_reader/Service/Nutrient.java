@@ -93,4 +93,19 @@ public class Nutrient {
         return ret + " " + unit ;
     }
 
+    public double getVal() {
+        double ret = 0 ;
+        if (per_day != 0){
+            ret = per_day;
+        }
+        if (per_hundred != 0){
+            ret = per_hundred;
+        }
+        if (per_portion != 0){
+            ret = per_portion;
+        }
+
+        return ret;
+    }
+
 }

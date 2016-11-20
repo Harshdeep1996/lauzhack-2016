@@ -10,7 +10,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class FoodObject {
-    private HashMap<String, Nutrient> nuts;
+    public HashMap<String, Nutrient> nuts;
+    public boolean isError = false;
     private ArrayList<String> ingredients;
     private String name ;
     public FoodObject() {
@@ -18,7 +19,13 @@ public class FoodObject {
         nuts = new HashMap<>();
         setName("");
     }
+    public Nutrient get (String key)
+    {
+        Nutrient ret = null ;
+        ret = nuts.get(key);
 
+        return ret == null ? new Nutrient () : ret;
+    }
     public void addNut(Nutrient nu) {
         nuts.put(nu.getName(), nu);
     }

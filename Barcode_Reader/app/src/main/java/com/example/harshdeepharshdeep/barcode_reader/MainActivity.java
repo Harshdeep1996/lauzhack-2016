@@ -22,6 +22,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.plattysoft.leonids.ParticleSystem;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         formatTxt = (TextView) findViewById(R.id.scan_format);
         contentTxt = (TextView) findViewById(R.id.scan_content);
         scanBtn.setOnClickListener(this);
+        // setContentView(R.layout.activity_confetti_example);
     }
 
     public void onClick(View v) {
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             scanIntegrator.initiateScan();
         }
     }
+
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         String scanContent = "", scanFormat = "";
@@ -74,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         //String url = "https://www.openfood.ch/api/v1/products?barcodes[]=3046920022651";
         String url = Tools.createGetBarcodeUrl(scanContent);
         Log.v("main", url);
+
+        FoodObject fObg;
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
@@ -84,6 +90,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                         String jsonString = response;
                         FoodObject fObj =  Tools.getFoodObjectFromJsonString(jsonString);
                         mTextView.setText(fObj.getName() + "\n" + fObj.toString());
+                        if(!fObj.isError){
+                            double sugar = fObj.nuts.get("Sugars").getVal();
+                            double carb = fObj.nuts.get("Carbohydrates").getVal();
+                            double fat = fObj.nuts.get("Fat").getVal();
+                            draw_magicStuff((int)sugar,(int)carb,(int)fat);
+                        }
+
 
                     }
                 }, new Response.ErrorListener() {
@@ -95,5 +108,29 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         });
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
+
+
     }
+
+    public void draw_magicStuff(int s, int c, int f ){
+        final double factor = 0.2;
+        new ParticleSystem(this, (15 *  (int)Math.ceil(factor * s)), R.drawable.confeti2, 10000)
+                .setSpeedModuleAndAngleRange(0f, 0.1f, 180, 180)
+                .setRotationSpeed(144)
+                .setAcceleration(0.00007f, 90)
+                .emit(findViewById(R.id.emiter_top_right), (int)Math.ceil(factor * s), 4000);
+
+        new ParticleSystem(this, 15 *  (int)Math.ceil(factor * c), R.drawable.confeti3, 10000)
+                .setSpeedModuleAndAngleRange(0f, 0.1f, 0, 0)
+                .setRotationSpeed(144)
+                .setAcceleration(0.00007f, 90)
+                .emit(findViewById(R.id.emiter_top_left), (int)Math.ceil(factor* c), 4000);
+
+        new ParticleSystem(this, 15* (int)Math.ceil(factor * f), R.drawable.confeti4, 10000)
+                .setSpeedModuleAndAngleRange(0f, 0.1f, 0, 0)
+                .setRotationSpeed(144)
+                .setAcceleration(0.00007f, 90)
+                .emit(findViewById(R.id.emiter_top_center), (int)Math.ceil( factor*f) , 4000);
+    }
+
 }

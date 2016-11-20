@@ -41,6 +41,7 @@ public class Tools {
         if(jsonString.contains("\"data\":[]"))
         {
             FoodObject ret = new FoodObject();
+            ret.isError = true;
             ret.setName("Error: json response is null");
             return ret;
         }
