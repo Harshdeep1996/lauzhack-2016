@@ -9,6 +9,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.harshdeepharshdeep.barcode_reader.Service.FoodObject;
+import com.example.harshdeepharshdeep.barcode_reader.Service.Tools;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import android.content.Intent;
@@ -52,11 +54,24 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (scanningResult != null)
         {
+<<<<<<< HEAD
             scanContent = scanningResult.getContents();
             scanFormat = scanningResult.getFormatName();
             formatTxt.setText("FORMAT: " + scanFormat);
             contentTxt.setText("CONTENT: " + scanContent);
         } else {
+=======
+            String scanContent = scanningResult.getContents();
+            String scanFormat = scanningResult.getFormatName();
+            FoodObject foodObj = Tools.getFoodObjectFromBarcode(scanContent);
+
+
+            formatTxt.setText("FORMAT: " + foodObj);
+            contentTxt.setText("CONTENT: " + foodObj);
+        }
+        else
+        {
+>>>>>>> 8a211377ec28d069fe5d8c157fe47b59160505a8
             Toast toast = Toast.makeText(getApplicationContext(),
                     "No scan data received!", Toast.LENGTH_SHORT);
             toast.show();
