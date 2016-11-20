@@ -8,6 +8,7 @@ package com.example.harshdeepharshdeep.barcode_reader.Service;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.Iterator;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,6 +49,27 @@ public class Tools {
         return parseFoodItem(response);
     }
 
+    private static void addIngredients (JSONObject foodJson,FoodObject fObj) {
+
+        JSONObject ingred = null;
+        try {
+            ingred = foodJson.getJSONObject("ingredients-translations");
+            Iterator it = ingred.keys();
+            String str = "";
+            while (it.hasNext()) {
+                String key = (String)it.next();
+                String val = ingred.getString(key);
+                str += (val + "\n");
+            }
+            str = (str.replace(',', '\n').replace(')','\n').replace('(','\n'));
+            fObj.addIngredients(str);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public static FoodObject parseFoodItem (JSONObject foodJson) {
         FoodObject ret = new FoodObject();
         try {
@@ -60,6 +82,8 @@ public class Tools {
                 thisNut.update(nutrients.getJSONObject(i));
                 ret.addNut(thisNut);
             }
+
+            addIngredients(foodJson,ret);
 
         } catch (JSONException e) {
             // TODO Auto-generated catch block
@@ -109,5 +133,7 @@ public class Tools {
                 reader.close();
         }
     }
+
+
 }
 

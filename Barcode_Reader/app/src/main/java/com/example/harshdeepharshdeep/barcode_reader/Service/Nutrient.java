@@ -80,7 +80,7 @@ public class Nutrient {
     }
     public String toString() {
 
-        String ret = "";
+        String ret = "No Info";
         if (per_day != 0){
             ret = "" + per_day;
         }
@@ -90,7 +90,7 @@ public class Nutrient {
         if (per_portion != 0){
             ret = "" + per_portion;
         }
-        return ret + " " + unit;
+        return ret + " " + unit ;
     }
 
 }
