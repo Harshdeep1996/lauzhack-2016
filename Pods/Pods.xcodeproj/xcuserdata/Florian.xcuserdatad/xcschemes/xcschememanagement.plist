@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>BarcodeScanner-BarcodeScanner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BarcodeScanner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Gloss.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-WhatTheFood.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2D0E1FF1272770259C68078F549263EB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>39C69D9B6A709F788E7F5A5E2BDCF612</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8CA90C5E84D59AA2EB837E6FFD0934C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EFAAB8230EA40F1F8FE61671783A5DEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

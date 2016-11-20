@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C48b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatTheFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="FFZ-Fm-n9U" kind="show" identifier="showCamera" id="4CK-va-Bsk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="EUy-0N-aZe">
+            <objects>
+                <viewController id="FFZ-Fm-n9U" customClass="CameraViewController" customModule="WhatTheFood" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mwo-Tf-s26"/>
+                        <viewControllerLayoutGuide type="bottom" id="spt-Nv-Ez1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4nF-lq-gLd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RpE-1K-oJg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="VIh-DC-44L" kind="embed" id="Io6-8N-7gc"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="ContainerView" destination="RpE-1K-oJg" id="dvq-Pq-WEA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXV-q7-dYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.33333333333337" y="138.58695652173915"/>
+        </scene>
+        <!--Emoji View Controller-->
+        <scene sceneID="MnI-ej-kG2">
+            <objects>
+                <viewController id="VIh-DC-44L" customClass="EmojiViewController" customModule="WhatTheFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oN5-kI-GGA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yck-GB-7Fc" customClass="EmojiView" customModule="WhatTheFood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdD-3L-Bwe">
+                                        <rect key="frame" x="31" y="8" width="39" height="30"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="CloseButton:" destination="VIh-DC-44L" eventType="touchUpInside" id="6p7-Nd-DyL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xdD-3L-Bwe" firstAttribute="leading" secondItem="yck-GB-7Fc" secondAttribute="leading" constant="31" id="0T7-mc-5MI"/>
+                                    <constraint firstItem="xdD-3L-Bwe" firstAttribute="top" secondItem="yck-GB-7Fc" secondAttribute="topMargin" id="RDO-y8-UYe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yck-GB-7Fc" firstAttribute="leading" secondItem="oN5-kI-GGA" secondAttribute="leading" id="806-aV-Ukm"/>
+                            <constraint firstAttribute="trailing" secondItem="yck-GB-7Fc" secondAttribute="trailing" id="Njm-ep-5l7"/>
+                            <constraint firstAttribute="bottom" secondItem="yck-GB-7Fc" secondAttribute="bottom" id="WLQ-FC-md9"/>
+                            <constraint firstItem="yck-GB-7Fc" firstAttribute="top" secondItem="oN5-kI-GGA" secondAttribute="top" id="o6P-Od-mR5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameView" destination="yck-GB-7Fc" id="S0e-M0-KYc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4X-OI-3Fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637.68115942029" y="138.58695652173915"/>
+        </scene>
+    </scenes>
+</document>
