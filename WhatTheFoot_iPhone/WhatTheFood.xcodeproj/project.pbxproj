@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		173941E11DE17AF10066562D /* NamedBezierPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173941E01DE17AF10066562D /* NamedBezierPathView.swift */; };
+		173941E31DE17B290066562D /* UIKit Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173941E21DE17B290066562D /* UIKit Extensions.swift */; };
+		173941E51DE17B600066562D /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173941E41DE17B600066562D /* EmojiViewController.swift */; };
+		173941E71DE17BFD0066562D /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173941E61DE17BFD0066562D /* EmojiView.swift */; };
+		173941E91DE17C4E0066562D /* FallingEmojiBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173941E81DE17C4E0066562D /* FallingEmojiBehavior.swift */; };
+		17ED61631DE14E64004FC451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ED61621DE14E64004FC451 /* AppDelegate.swift */; };
+		17ED61651DE14E64004FC451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ED61641DE14E64004FC451 /* ViewController.swift */; };
+		17ED61681DE14E64004FC451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ED61661DE14E64004FC451 /* Main.storyboard */; };
+		17ED616A1DE14E64004FC451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17ED61691DE14E64004FC451 /* Assets.xcassets */; };
+		17ED616D1DE14E64004FC451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ED616B1DE14E64004FC451 /* LaunchScreen.storyboard */; };
+		17ED61781DE14F1A004FC451 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ED61771DE14F1A004FC451 /* CameraViewController.swift */; };
+		CF2810E754C20447747588CD /* Pods_WhatTheFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90834443D2AAE67CE43DE031 /* Pods_WhatTheFood.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14CFCEDF92A667AB52973E98 /* Pods-WhatTheFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatTheFood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatTheFood/Pods-WhatTheFood.debug.xcconfig"; sourceTree = "<group>"; };
+		173941E01DE17AF10066562D /* NamedBezierPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedBezierPathView.swift; sourceTree = "<group>"; };
+		173941E21DE17B290066562D /* UIKit Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit Extensions.swift"; sourceTree = "<group>"; };
+		173941E41DE17B600066562D /* EmojiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
+		173941E61DE17BFD0066562D /* EmojiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		173941E81DE17C4E0066562D /* FallingEmojiBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallingEmojiBehavior.swift; sourceTree = "<group>"; };
+		17ED615F1DE14E64004FC451 /* WhatTheFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatTheFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17ED61621DE14E64004FC451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17ED61641DE14E64004FC451 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17ED61671DE14E64004FC451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17ED61691DE14E64004FC451 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17ED616C1DE14E64004FC451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17ED616E1DE14E64004FC451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17ED61771DE14F1A004FC451 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		90834443D2AAE67CE43DE031 /* Pods_WhatTheFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatTheFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B53939087DBCB40E0ED6236E /* Pods-WhatTheFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatTheFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatTheFood/Pods-WhatTheFood.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17ED615C1DE14E64004FC451 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF2810E754C20447747588CD /* Pods_WhatTheFood.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17ED61561DE14E64004FC451 = {
+			isa = PBXGroup;
+			children = (
+				17ED61611DE14E64004FC451 /* WhatTheFood */,
+				17ED61601DE14E64004FC451 /* Products */,
+				7AE9E3C911F98D193FCBBB64 /* Pods */,
+				DD7972530F85B3CBCEFE1207 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		17ED61601DE14E64004FC451 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17ED615F1DE14E64004FC451 /* WhatTheFood.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17ED61611DE14E64004FC451 /* WhatTheFood */ = {
+			isa = PBXGroup;
+			children = (
+				17ED61641DE14E64004FC451 /* ViewController.swift */,
+				17ED61661DE14E64004FC451 /* Main.storyboard */,
+				17ED61771DE14F1A004FC451 /* CameraViewController.swift */,
+				173941E01DE17AF10066562D /* NamedBezierPathView.swift */,
+				173941E21DE17B290066562D /* UIKit Extensions.swift */,
+				173941E41DE17B600066562D /* EmojiViewController.swift */,
+				173941E61DE17BFD0066562D /* EmojiView.swift */,
+				173941E81DE17C4E0066562D /* FallingEmojiBehavior.swift */,
+				17ED61741DE14E77004FC451 /* Supporting Files */,
+			);
+			path = WhatTheFood;
+			sourceTree = "<group>";
+		};
+		17ED61741DE14E77004FC451 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17ED61621DE14E64004FC451 /* AppDelegate.swift */,
+				17ED61691DE14E64004FC451 /* Assets.xcassets */,
+				17ED616B1DE14E64004FC451 /* LaunchScreen.storyboard */,
+				17ED616E1DE14E64004FC451 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7AE9E3C911F98D193FCBBB64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14CFCEDF92A667AB52973E98 /* Pods-WhatTheFood.debug.xcconfig */,
+				B53939087DBCB40E0ED6236E /* Pods-WhatTheFood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD7972530F85B3CBCEFE1207 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90834443D2AAE67CE43DE031 /* Pods_WhatTheFood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17ED615E1DE14E64004FC451 /* WhatTheFood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17ED61711DE14E64004FC451 /* Build configuration list for PBXNativeTarget "WhatTheFood" */;
+			buildPhases = (
+				A0F6F3782617D2FB581271B9 /* [CP] Check Pods Manifest.lock */,
+				17ED615B1DE14E64004FC451 /* Sources */,
+				17ED615C1DE14E64004FC451 /* Frameworks */,
+				17ED615D1DE14E64004FC451 /* Resources */,
+				E31C9BA3D7BE57186C70FDF9 /* [CP] Embed Pods Frameworks */,
+				43E724A47DE91565DA04DE97 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhatTheFood;
+			productName = WhatTheFood;
+			productReference = 17ED615F1DE14E64004FC451 /* WhatTheFood.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17ED61571DE14E64004FC451 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Florian Bienefelt";
+				TargetAttributes = {
+					17ED615E1DE14E64004FC451 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = DW7HBXG8PU;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 17ED615A1DE14E64004FC451 /* Build configuration list for PBXProject "WhatTheFood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17ED61561DE14E64004FC451;
+			productRefGroup = 17ED61601DE14E64004FC451 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17ED615E1DE14E64004FC451 /* WhatTheFood */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17ED615D1DE14E64004FC451 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17ED616D1DE14E64004FC451 /* LaunchScreen.storyboard in Resources */,
+				17ED616A1DE14E64004FC451 /* Assets.xcassets in Resources */,
+				17ED61681DE14E64004FC451 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43E724A47DE91565DA04DE97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatTheFood/Pods-WhatTheFood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0F6F3782617D2FB581271B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E31C9BA3D7BE57186C70FDF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatTheFood/Pods-WhatTheFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17ED615B1DE14E64004FC451 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				173941E31DE17B290066562D /* UIKit Extensions.swift in Sources */,
+				17ED61781DE14F1A004FC451 /* CameraViewController.swift in Sources */,
+				17ED61651DE14E64004FC451 /* ViewController.swift in Sources */,
+				173941E71DE17BFD0066562D /* EmojiView.swift in Sources */,
+				173941E51DE17B600066562D /* EmojiViewController.swift in Sources */,
+				173941E11DE17AF10066562D /* NamedBezierPathView.swift in Sources */,
+				173941E91DE17C4E0066562D /* FallingEmojiBehavior.swift in Sources */,
+				17ED61631DE14E64004FC451 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17ED61661DE14E64004FC451 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17ED61671DE14E64004FC451 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17ED616B1DE14E64004FC451 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17ED616C1DE14E64004FC451 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17ED616F1DE14E64004FC451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17ED61701DE14E64004FC451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17ED61721DE14E64004FC451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14CFCEDF92A667AB52973E98 /* Pods-WhatTheFood.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DW7HBXG8PU;
+				INFOPLIST_FILE = WhatTheFood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.florianbienefelt.WhatTheFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		17ED61731DE14E64004FC451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B53939087DBCB40E0ED6236E /* Pods-WhatTheFood.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DW7HBXG8PU;
+				INFOPLIST_FILE = WhatTheFood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.florianbienefelt.WhatTheFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17ED615A1DE14E64004FC451 /* Build configuration list for PBXProject "WhatTheFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17ED616F1DE14E64004FC451 /* Debug */,
+				17ED61701DE14E64004FC451 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17ED61711DE14E64004FC451 /* Build configuration list for PBXNativeTarget "WhatTheFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17ED61721DE14E64004FC451 /* Debug */,
+				17ED61731DE14E64004FC451 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17ED61571DE14E64004FC451 /* Project object */;
+}

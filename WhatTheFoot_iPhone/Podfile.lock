@@ -1,0 +1,15 @@
+PODS:
+  - BarcodeScanner (2.0.0)
+  - Gloss (1.1.0)
+
+DEPENDENCIES:
+  - BarcodeScanner
+  - Gloss (~> 1.1)
+
+SPEC CHECKSUMS:
+  BarcodeScanner: 266ab4b479d407b74bc4b473fa5020b4523ad9e3
+  Gloss: a8340c124ff69c5d1c12e06c252373f4a16d2958
+
+PODFILE CHECKSUM: 870fb2915c73d5e13aed4ffde4fe16361f4487a3
+
+COCOAPODS: 1.1.1
