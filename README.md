@@ -1,40 +1,8 @@
-# lauzhack-2016
-Lauzhack hackathon
+# WTFood
+Lauzhack hackathon - 2016 (Participated in the OpenFood and IBM Challenge, Winning team for the IBM Challenge).
 
-# !! PANIC !!
-Project killed due to problems... feasibility problems... ¯\(°_o)/¯
+# Emojis behind your food.
 
-
-# System Configuration
-You shoud have installed virtualenv:
-```
-$ sudo pip install virtualenv
-```
-
-Enter in the root folder of this project:
-```
-$ cd lauzhack-2016
-```
-
-set up a new virtual environment:
-
-```
-$ virtualenv env
-```
-
-You can choose another name for the environment instead of “env”, but you should add it in your .gitignore then.
-
-To start the above environment we just need to run the following command:
-```
-$ . env/bin/activate
-```
-
-In our venv we will first install Flask framework:
-```
-(venv) lauzhack-2016 $ pip install Flask
-``` 
-
-# Start the API Server
-```
-(venv) lauzhack-2016 $ python whatthecrop.py
-``` 
+# Description
+A way to visualize nutritional information for children, by showing different nutritional values by the means of emojis. The app has been made in both Android and iOS versions.  
+The emojis refer to three type of nutritional values : Fats(Poop), Carbonhydrates(Fries) and Sugars (:P). 
